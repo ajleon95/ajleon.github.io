@@ -25,12 +25,11 @@ layout: default
     {{ content }}
     {% include navlinks.html %}
     <div class="tags">
-      <span>
-        {% for tag in page.tags %}
-          {% capture tag_name %}{{ tag }}{% endcapture %}
-          <a href="/tag/{{ tag_name }}">{{ tag_name }}</a>&nbsp;
-        {% endfor %}
-      </span>
+      <span class="tags-label">Tags: </span>
+      {% for tag in page.tags %}
+        {% capture tag_name %}{{ tag }}{% endcapture %}
+        <a href="/tag/{{ tag_name }}">{{ tag_name }}</a>&nbsp;
+      {% endfor %}
     </div>
   </div>
   
