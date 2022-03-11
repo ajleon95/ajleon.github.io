@@ -40,3 +40,8 @@ defaults:
       type: post
     values:
       tags: Other
+  -
+    scope:
+      path: "tag/"
+    values:
+      sitemap: false
