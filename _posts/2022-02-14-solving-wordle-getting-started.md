@@ -1,5 +1,5 @@
 ---
-tags: 161p, wordle-solver, projects
+tags: cs161p projects wordle-solver 
 ---
 
 # Building a Wordle Solver, Part 1
