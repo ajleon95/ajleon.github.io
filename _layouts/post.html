@@ -27,7 +27,7 @@ layout: default
       <span class="tags-label">Tags: </span>
       {% for tag in page.tags %}
         {% capture tag_name %}{{ tag }}{% endcapture %}
-        <a href="{{ link /archive.md }}#{{ tag_name }}">{{ tag_name }}</a>&nbsp;
+        <a href="{% link /archive.md %}#{{ tag_name }}">{{ tag_name }}</a>&nbsp;
       {% endfor %}
     </div>
     {% include navlinks.html %}
