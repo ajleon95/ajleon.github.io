@@ -41,6 +41,6 @@ defaults:
     values:
       tags: Other
   - scope:
-      path: "tag/*.md"
+      path: "tag/**"
     values:
       sitemap: false
