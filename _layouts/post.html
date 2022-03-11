@@ -23,7 +23,6 @@ layout: default
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
-    {% include navlinks.html %}
     <div class="tags">
       <span class="tags-label">Tags: </span>
       {% for tag in page.tags %}
@@ -31,6 +30,7 @@ layout: default
         <a href="/tag/{{ tag_name }}">{{ tag_name }}</a>&nbsp;
       {% endfor %}
     </div>
+    {% include navlinks.html %}
   </div>
   
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
