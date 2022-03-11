@@ -24,16 +24,15 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
     {% include navlinks.html %}
+    <div class="tags">
+      <span>
+        {% for tag in page.tags %}
+          {% capture tag_name %}{{ tag }}{% endcapture %}
+          <a href="/tag/{{ tag_name }}">{{ tag_name }}</a>&nbsp;
+        {% endfor %}
+      </span>
+    </div>
   </div>
   
-  <div class="tags">
-    <span>[
-      {% for tag in page.tags %}
-        {% capture tag_name %}{{ tag }}{% endcapture %}
-        <a href="/tag/{{ tag_name }}">{{ tag_name }}&nbsp;</a>
-      {% endfor %}
-    ]</span>
-  </div>
-
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
