@@ -1,3 +1,7 @@
+---
+tags: 161p, wordle-solver, projects
+---
+
 # Building a Wordle Solver, Part 1
 ## Introduction
 Like everyone else in 2022, I am obsessed with playing [Wordle](http://powerlanguage.co.uk/wordle). However, my aptitude for guessing 5 letter words is... well, it's not great. "HELLO"... then... uhh... Okay, no "E"... How about "HOTEL"? Does "SOCK" have 5 letters? 
