@@ -55,7 +55,7 @@ where each value is one of five letters. Then, I prompt the user for their green
 def get_green_letters():
     """Prompts user for green letters and returns a list of green letters and their positions in the word"""
     green_letter_positions = [None, None, None, None, None]
-	green_letters = input("What green letters do you have? ").lower()
+    green_letters = input("What green letters do you have? ").lower()
 ```
 
 Next, we need to find out where those letters are on the board. I used a for loop to iterate over each letter from the above input, and ask each user for that letters's position in the word with a number.
@@ -64,7 +64,7 @@ Next, we need to find out where those letters are on the board. I used a for loo
 def get_green_letters():
     """Prompts user for green letters and returns a list of green letters and their positions in the word"""
     green_letter_positions = [None, None, None, None, None]
-	green_letters = input("What green letters do you have? ").lower()
+    green_letters = input("What green letters do you have? ").lower()
     for letter in green_letters:
         position = int(input(f"What position is {letter.upper()} in? "))
         green_letter_positions[position-1] = letter
