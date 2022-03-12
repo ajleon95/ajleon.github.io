@@ -25,7 +25,7 @@ So we have our first function!
 
 Next up, the yellow letters would also be quite simple. For v1 of this solver, I decided to not worry about where the yellow letters are in the puzzle. While that can be a valuable clue, it is also just as valuable to be able to discard words that don't have a yellow letter. 
 
-So, it'll be up to the user to make sure that a potential solution on the list matches the yellow letter hints from the game. With that limitation in mind, we can use the same code from above and tweak it just a little bit.
+So, it'll be up to the user to make sure that a potential solution on the list matches the yellow letter hints from the game. With that limitation in mind, I can use the same code from above and tweak it just a little bit.
 
 ```python
 def get_yellow_letters():
@@ -41,7 +41,7 @@ So I had to think of a way to represent the letter and its position on the board
 
 At first I thought about using a string. But that seemed a little too complicated. How would I handle having only the third letter, or the first and fourth letter, or some other combination? 
 
-So then I thought a list would be a great way to represent the 5 letters. We can make a list with 5 None values like this:
+So then I thought a list would be a great way to represent the 5 letters. I made a list with 5 `None` values like this:
 
 ```python
 def get_green_letters():
@@ -49,7 +49,7 @@ def get_green_letters():
     green_letter_positions = [None, None, None, None, None]
 ```
 
-where each value is one of five letters. Then, we prompt the user for their green letters. 
+where each value is one of five letters. Then, I prompt the user for their green letters. 
 
 ```python
 def get_green_letters():
@@ -58,7 +58,7 @@ def get_green_letters():
 	green_letters = input("What green letters do you have? ").lower()
 ```
 
-Next, we need to find out where those letters are on the board. We can use a for loop to iterate over each letter from the above input, and ask each user for that letters's position in the word with a number.
+Next, we need to find out where those letters are on the board. I used a for loop to iterate over each letter from the above input, and ask each user for that letters's position in the word with a number.
 
 ```python
 def get_green_letters():
@@ -71,7 +71,7 @@ def get_green_letters():
     return green_letter_positions
 ```
 
-Python lists are 0-index, so that the first letter would be index 0. So we need to subtract 1 from the value from the user, since the user will input a number from 1 to 5. 
+Python lists are 0-index, so that the first letter would be index 0. So I need to subtract 1 from the value from the user, since the user will input a number from 1 to 5. 
 
 Now we have a complete suite of functions to gather most of the available hints from the game via the user! 
 
@@ -87,6 +87,7 @@ With the lesson from the text, I was able to create a function to get potential 
 
 ```python
 def get_potential_words():
+    """Searches wordle word list and returns possible words that match the grey, yellow and green letters inputted"""
     wordle_dictionary = open("wordle.txt", "r")
     for word in wordle_dictionary:
         word = word.replace("\n", "")  # remove newline
