@@ -45,10 +45,10 @@ This should be pretty simple. All there is to do is iterate over each letter in 
 ```python
 def has_any_letter(word, letters):
 	"""Returns True if word has any letter in letters"""
-    for letter in letters:
-        if letter in word:
-            return True
-    return False
+	for letter in letters:
+		if letter in word:
+			return True
+	return False
 ```
 
 Now I can write some code like this to test that a potential solution conforms to the grey letter clues.
@@ -73,12 +73,12 @@ I decided on an accumulator that will count the number of letters in `word` that
 
 ```python
 def has_all_letters(word, letters):
-    """Returns True if word has all letters in letters"""
-    count = 0
-    for letter in letters:
-        if letter in word:
-            count += 1
-    return count == len(letters)
+	"""Returns True if word has all letters in letters"""
+	count = 0
+	for letter in letters:
+		if letter in word:
+			count += 1
+	return count == len(letters)
 ```
 
 A little more complicated, but still quite straightforward. Let's deal with the last piece of the puzzle, which is the green letters. 
@@ -149,10 +149,10 @@ Let's revisit `get_potential_words()`.
 ```python
 def get_potential_words():
 	"""Searches wordle word list and returns possible words that match the grey, yellow and green letters inputted"""
-    wordle_dictionary = open("wordle.txt", "r")
-    for word in wordle_dictionary:
-        word = word.replace("\n", "")  # remove newline
-        print(word)
+	wordle_dictionary = open("wordle.txt", "r")
+	for word in wordle_dictionary:
+		word = word.replace("\n", "")  # remove newline
+		print(word)
 ```
 
 Right now, it prints potential words. And it prints every potential word. 
@@ -171,11 +171,11 @@ I first created a list I can use to add potential words. The function then retur
 def get_potential_words():
 	"""Searches wordle word list and returns possible words that match the grey, yellow and green letters inputted"""
 	potential_words = []
-    wordle_dictionary = open("wordle.txt", "r")
-    for word in wordle_dictionary:
-        word = word.replace("\n", "")  # remove newline
-        potential_words.append(word)
-    return potential_words
+	wordle_dictionary = open("wordle.txt", "r")
+	for word in wordle_dictionary:
+		word = word.replace("\n", "")  # remove newline
+		potential_words.append(word)
+	return potential_words
 ``` 
 
 It's time to add checks against `word` using the functions I created. A simple if statement can help us out. `get_potential_words()` will also need to accept the various clues we've gathered. 
@@ -184,14 +184,14 @@ It's time to add checks against `word` using the functions I created. A simple i
 def get_potential_words(grey_letters, yellow_letters, green_letters):
 	"""Searches wordle word list and returns possible words that match the grey, yellow and green letters inputted"""
 	potential_words = []
-    wordle_dictionary = open("wordle.txt", "r")
-    for word in wordle_dictionary:
-        word = word.replace("\n", "")  # remove newline
-        if has_any_letter(word, grey_letters) is False and \
-        		has_all_letters(word, yellow_letters) and \
-                has_positioned_letters(word, green_letters):
-        	potential_words.append(word)
-    return potential_words
+	wordle_dictionary = open("wordle.txt", "r")
+	for word in wordle_dictionary:
+		word = word.replace("\n", "")  # remove newline
+		if has_any_letter(word, grey_letters) is False and \
+				has_all_letters(word, yellow_letters) and \
+				has_positioned_letters(word, green_letters):
+			potential_words.append(word)
+	return potential_words
 ``` 
 
 Now we're getting somewhere! Instead of printing all letters, now `get_potential_words()` will return a list of potential words that conform to the clues we've got from the game. 
