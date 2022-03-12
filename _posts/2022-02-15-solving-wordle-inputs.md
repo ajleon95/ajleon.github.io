@@ -41,20 +41,20 @@ So I had to think of a way to represent the letter and its position on the board
 
 At first I thought about using a string. But that seemed a little too complicated. How would I handle having only the third letter, or the first and fourth letter, or some other combination? 
 
-So then I thought an empty list would be a great way to represent the 5 letters. We can make an empty list like this:
+So then I thought a list would be a great way to represent the 5 letters. We can make a list with 5 None values like this:
 
 ```python
 def get_green_letters():
     """Prompts user for green letters and returns a list of green letters and their positions in the word"""
-    green_letter_positions = ["", "", "", "", ""]
+    green_letter_positions = [None, None, None, None, None]
 ```
 
-where each empty string is one of five letters. Then, we prompt the user for their green letters. 
+where each value is one of five letters. Then, we prompt the user for their green letters. 
 
 ```python
 def get_green_letters():
     """Prompts user for green letters and returns a list of green letters and their positions in the word"""
-    green_letter_positions = ["", "", "", "", ""]
+    green_letter_positions = [None, None, None, None, None]
 	green_letters = input("What green letters do you have? ").lower()
 ```
 
@@ -63,13 +63,15 @@ Next, we need to find out where those letters are on the board. We can use a for
 ```python
 def get_green_letters():
     """Prompts user for green letters and returns a list of green letters and their positions in the word"""
-    green_letter_positions = ["", "", "", "", ""]
+    green_letter_positions = [None, None, None, None, None]
 	green_letters = input("What green letters do you have? ").lower()
     for letter in green_letters:
         position = int(input(f"What position is {letter.upper()} in? "))
         green_letter_positions[position-1] = letter
     return green_letter_positions
 ```
+
+Python lists are 0-index, so that the first letter would be index 0. So we need to subtract 1 from the value from the user, since the user will input a number from 1 to 5. 
 
 Now we have a complete suite of functions to gather most of the available hints from the game via the user! 
 
