@@ -18,11 +18,11 @@ def main():
     green_letters = get_green_letters()
 ```
 
-This is a great place to get started. Now, the program will prompt the user for all clues on the board. 
+This is a great place to get started. As it stands, the program will prompt the user for all clues on the board. 
 
 But what next? It's easy. With my variables `grey_letters`, `yellow_letters` and `green_letters`, I can use the `get_potential_words` function I built in my last post. The function will return a list of potential words that conform to the grey, yellow and green letter clues. 
 
-So we just need to call `get_potential_words` with the relevant parameters and assign the returned list to a variable. Then, we can iterate over that list to display all potential words to the user.
+So I just need to call `get_potential_words` with the relevant parameters and assign the returned list to a variable. Then, the program can iterate over that list to display all potential words to the user.
 
 ```python
 def main():
@@ -158,7 +158,7 @@ The user needs to input a value between 1 and 5. But what happens if they input 
 
 I want the program to make sure that the user is inputting a valid number between 1 and 5, inclusive, and make sure the program doesn't crash if there's a mistake or misunderstanding. Thankfully, this is easy to add. 
 
-We can use a while loop similar to in `get_yes_no` to repeat a block of code until the user enters a valid number. 
+I can use a while loop similar to in `get_yes_no` to repeat a block of code until the user enters a valid number. 
 
 ```python
 def get_green_letters():
@@ -199,7 +199,7 @@ That was simple! Now, if a user enters a value other than a number, or a number 
 
 ## Recap
 
-Wow, that was quite a final step! I put the program together to give the user a cohesive experience from start to finish. Then, I added some enhancements to help make it friendlier to both users and other programmers reading through the code. With this completed, I think I will call this program the MVWS: the Minimum Viable Wordle Solver!
+I created a cohesive experience from start to finish to help the user solve Wordle. Then, I added some enhancements to help make it friendlier to both users and other programmers reading through the code. With this completed, I think I will call this program the MVWS: the Minimum Viable Wordle Solver! It's very satisfying to see everything come together. 
 
 ## What next?
 
