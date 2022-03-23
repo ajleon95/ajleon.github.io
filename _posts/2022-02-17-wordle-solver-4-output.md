@@ -18,11 +18,11 @@ def main():
     green_letters = get_green_letters()
 ```
 
-This is a great place to get started. Now, the program will prompt the user for all clues on the board. 
+This is a great place to get started. As it stands, the program will prompt the user for all clues on the board. 
 
 But what next? It's easy. With my variables `grey_letters`, `yellow_letters` and `green_letters`, I can use the `get_potential_words` function I built in my last post. The function will return a list of potential words that conform to the grey, yellow and green letter clues. 
 
-So we just need to call `get_potential_words` with the relevant parameters and assign the returned list to a variable. Then, we can iterate over that list to display all potential words to the user.
+So I just need to call `get_potential_words` with the relevant parameters and assign the returned list to a variable. Then, the program can iterate over that list to display all potential words to the user.
 
 ```python
 def main():
@@ -158,7 +158,7 @@ The user needs to input a value between 1 and 5. But what happens if they input 
 
 I want the program to make sure that the user is inputting a valid number between 1 and 5, inclusive, and make sure the program doesn't crash if there's a mistake or misunderstanding. Thankfully, this is easy to add. 
 
-We can use a while loop similar to in `get_yes_no` to repeat a block of code until the user enters a valid number. 
+I can use a while loop similar to in `get_yes_no` to repeat a block of code until the user enters a valid number. 
 
 ```python
 def get_green_letters():
@@ -199,7 +199,7 @@ That was simple! Now, if a user enters a value other than a number, or a number 
 
 ## Recap
 
-Wow, that was quite a final step! I put the program together to give the user a cohesive experience from start to finish. Then, I added some enhancements to help make it friendlier to both users and other programmers reading through the code. With this completed, I think I will call this program the MVWS: the Minimum Viable Wordle Solver!
+I created a cohesive experience from start to finish to help the user solve Wordle. Then, I added some enhancements to help make it friendlier to both users and other programmers reading through the code. With this completed, I think I will call this program the MVWS: the Minimum Viable Wordle Solver! It's very satisfying to see everything come together. 
 
 ## What next?
 
@@ -207,8 +207,8 @@ The MVWS will certainly help you improve your Wordle score and maybe even beat y
 
 With that in mind, there are a lot of enhancements I would love to add to this program in the future: 
 * **Yellow letter positions.** Wordle will color a letter yellow when it is in the word, but in the wrong place. It would be very helpful to eliminate possible words based on having a yellow letter in a certain position. 
-* **Double letters.** It's possible to have any given letter be a yellow or green letter AND a grey letter be the same time. For example, guessing DRESS against STAND would have one yellow S and one grey S. How can we use this information to narrow down the word list even further? 
-* **Best next guess.** Using the list of possible words, what should the user guess next to eliminate as many possible words? 
+* **Double letters.** It's possible to have any given letter be a yellow or green letter *and* a grey letter be the same time. For example, guessing DRESS against STAND would have one yellow S and one grey S. How can we use this information to narrow down the word list even further? 
+* **Best next guess.** Using the list of possible words, what should the user guess next to eliminate the most possible words from the list? 
 * **Best first guess.** Once we have a way to determine the best next guess, I can work backwards to suggest the best first guess. 
 
 But for now, this program will be an invaluable tool as I play Wordle. Thank you for following along as I put it together! 
