@@ -2,7 +2,7 @@
 tags: cs161p projects wordle-solver
 ---
 
-# Building a Wordle Solver, Part 4: Output & Enhancements
+# Building a Wordle Solver, Part 4: Output and Enhancements
 ## Putting it all together
 
 With my inputs and processing out of the way, now I need to build a way to gather the inputs from the user, and then use that input to display solutions. 
