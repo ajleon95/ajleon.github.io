@@ -207,8 +207,8 @@ The MVWS will certainly help you improve your Wordle score and maybe even beat y
 
 With that in mind, there are a lot of enhancements I would love to add to this program in the future: 
 * **Yellow letter positions.** Wordle will color a letter yellow when it is in the word, but in the wrong place. It would be very helpful to eliminate possible words based on having a yellow letter in a certain position. 
-* **Double letters.** It's possible to have any given letter be a yellow or green letter AND a grey letter be the same time. For example, guessing DRESS against STAND would have one yellow S and one grey S. How can we use this information to narrow down the word list even further? 
-* **Best next guess.** Using the list of possible words, what should the user guess next to eliminate as many possible words? 
+* **Double letters.** It's possible to have any given letter be a yellow or green letter *and* a grey letter be the same time. For example, guessing DRESS against STAND would have one yellow S and one grey S. How can we use this information to narrow down the word list even further? 
+* **Best next guess.** Using the list of possible words, what should the user guess next to eliminate the most possible words from the list? 
 * **Best first guess.** Once we have a way to determine the best next guess, I can work backwards to suggest the best first guess. 
 
 But for now, this program will be an invaluable tool as I play Wordle. Thank you for following along as I put it together! 
